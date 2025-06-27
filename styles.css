@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1d1d1d, #2c2c54); /* ✅ Gradient background */
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chatbot-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #111, #1f1f1f); /* ✅ Gradient inside chatbot */
+  box-shadow: 0 0 10px #00000070;
+}
+
+/* Header */
+#chatbot-header {
+  background: linear-gradient(to right, #ff416c, #ff4b2b); /* ✅ Gradient header */
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+#chatbot-header h2 {
+  font-weight: 600;
+}
+
+/* Chat Body */
+#chatbot-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: transparent;
+}
+
+#chatbot-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  padding: 12px 15px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+
+.message.user {
+  background: linear-gradient(to left, #ff4b2b, #ff416c);
+  align-self: flex-end;
+  color: white;
+}
+
+.message.bot {
+  background: linear-gradient(to right, #434343, #262626);
+  align-self: flex-start;
+  color: white;
+}
+
+/* Input */
+#chatbot-input-container {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #444;
+  background-color: #222;
+}
+
+#chatbot-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+}
+
+#send-btn {
+  margin-left: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #ff4b2b, #ff416c); /* ✅ Gradient button */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#send-btn:hover {
+  background: linear-gradient(to right, #e63e2b, #e63e75);
+}
